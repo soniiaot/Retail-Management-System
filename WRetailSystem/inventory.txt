@@ -1,0 +1,19 @@
+Tops - Size: 20, Color: red, Price: $20.0, Brand: Lui Viddon, Sleeve Length: 20
+Pants - Size: 20, Color: red, Price: $20.0, Brand: gucci, Quantity: 5, Fit Type: Baggy
+Pants - Size: 20, Color: Red, Price: $30.0, Brand: Gucci, Quantity: 10, Fit Type: Skinny
+Tops - Size: 20, Color: red, Price: $100.0, Brand: f, Quantity: 10, Sleeve Length: 20
+Tops - Size: 20, Color: Red, Price: $200.0, Brand: Gucci, Quantity: 2, Sleeve Length: 20
+Pants - Size: 20, Color: Red, Price: $200.0, Brand: Gucci, Quantity: 20, Fit Type: Skinny
+Lingerie - Size: 25, Color: Red, Price: $200.0, Brand: Gucci, Quantity: 20, Material: Cotton
+Knitwear - Size: 20, Color: Green, Price: $999.0, Brand: Adidas, Quantity: 1, Knit Type: Double Knit
+Lingerie - Size: 30, Color: Black, Price: $100.0, Brand: Lui Vids, Quantity: 5, Material: Cotton
+Knitwear - Size: 20, Color: Red, Price: $30.0, Brand: Ll, Quantity: 200, Knit Type: Double
+Tops - Size: 20, Color: Red, Price: $39.0, Brand: LV, Quantity: 1, Sleeve Length: 20
+Lingerie - Size: 20, Color: Black, Price: $20.0, Brand: LV, Quantity: 20, Material: Cotton
+Knitwear - Size: 30, Color: Green, Price: $10.0, Brand: HJ, Quantity: 100, Knit Type: Doube
+Tops - Size: 20, Color: Red, Price: $200.0, Brand: GH, Quantity: 1, Sleeve Length: 20
+Pants - Size: 10, Color: Green, Price: $10.0, Brand: QW, Quantity: 100, Fit Type: Skinny
+Lingerie - Size: 20, Color: Red, Price: $100.0, Brand: Gucci, Quantity: 20, Material: Cotton
+Pants - Size: 35, Color: Black, Price: $200.0, Brand: Gucci, Quantity: 20, Fit Type: Skinny
+Pants - Size: 20, Color: Red, Price: $40.0, Brand: Gucci, Quantity: 100, Fit Type: Baggy
+Pants - Size: 20, Color: Red, Price: $20.0, Brand: Gucci, Quantity: 20, Fit Type: Skinny
