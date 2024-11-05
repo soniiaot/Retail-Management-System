@@ -1,4 +1,5 @@
 package wretailsystem;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -10,14 +11,14 @@ public class CategoryManagementGUI extends JFrame {
 
     private JTable categoryTable;
     private DefaultTableModel tableModel;
-    private CategoryUI categoryUI; // Assuming CategoryUI is the controller for categories
+    private CategoryUI categoryUI;
 
     public CategoryManagementGUI(CategoryUI categoryUI) {
         this.categoryUI = categoryUI;
         setTitle("Category Management");
         setSize(600, 400);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setLocationRelativeTo(null); // Center on screen
+        setLocationRelativeTo(null);
 
         initComponents();
         loadCategoryData();
@@ -26,12 +27,10 @@ public class CategoryManagementGUI extends JFrame {
     private void initComponents() {
         setLayout(new BorderLayout());
 
-        // Table setup
         tableModel = new DefaultTableModel(new String[]{"Category ID", "Category Name"}, 0);
         categoryTable = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(categoryTable);
 
-        // Button panel setup
         JPanel buttonPanel = new JPanel(new GridLayout(1, 3, 10, 0));
         JButton addButton = new JButton("Add");
         JButton updateButton = new JButton("Update");
@@ -41,35 +40,16 @@ public class CategoryManagementGUI extends JFrame {
         buttonPanel.add(updateButton);
         buttonPanel.add(deleteButton);
 
-        // Add components to the frame
         add(scrollPane, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
 
-        // Button actions
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                showAddCategoryDialog();
-            }
-        });
-
-        updateButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                showUpdateCategoryDialog();
-            }
-        });
-
-        deleteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                showDeleteCategoryDialog();
-            }
-        });
+        addButton.addActionListener(e -> showAddCategoryDialog());
+        updateButton.addActionListener(e -> showUpdateCategoryDialog());
+        deleteButton.addActionListener(e -> showDeleteCategoryDialog());
     }
 
     private void loadCategoryData() {
-        tableModel.setRowCount(0); // Clear existing data
+        tableModel.setRowCount(0);
         List<Category> categories = categoryUI.getAllCategories();
         for (Category category : categories) {
             tableModel.addRow(new Object[]{category.getCategoryID(), category.getCategoryName()});
@@ -80,7 +60,7 @@ public class CategoryManagementGUI extends JFrame {
         String categoryName = JOptionPane.showInputDialog(this, "Enter Category Name:", "Create New Category", JOptionPane.PLAIN_MESSAGE);
         if (categoryName != null && !categoryName.trim().isEmpty()) {
             categoryUI.createCategory(categoryName);
-            loadCategoryData(); // Refresh table data
+            loadCategoryData();
         }
     }
 
@@ -97,7 +77,7 @@ public class CategoryManagementGUI extends JFrame {
         String newName = JOptionPane.showInputDialog(this, "Enter New Category Name:", currentName);
         if (newName != null && !newName.trim().isEmpty()) {
             categoryUI.updateCategory(categoryID, newName);
-            loadCategoryData(); // Refresh table data
+            loadCategoryData();
         }
     }
 
@@ -113,19 +93,10 @@ public class CategoryManagementGUI extends JFrame {
         if (confirmation == JOptionPane.YES_OPTION) {
             boolean success = categoryUI.deleteCategory(categoryID);
             if (success) {
-                loadCategoryData(); // Refresh table data
+                loadCategoryData();
             } else {
                 JOptionPane.showMessageDialog(this, "Cannot delete category as it is linked to existing products.", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            CategoryUI categoryUI = new CategoryUI(new CategoryService()); // Replace with actual service/controller initialization
-            CategoryManagementGUI gui = new CategoryManagementGUI(categoryUI);
-            gui.setVisible(true);
-        });
-    }
 }
-

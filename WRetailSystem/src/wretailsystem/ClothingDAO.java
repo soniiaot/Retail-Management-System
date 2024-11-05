@@ -8,11 +8,11 @@ import java.sql.Statement;
 
 public class ClothingDAO {
 
-    private static final String DB_URL = "jdbc:derby:rms;create=true";
+    static final String CLOTHING_DB_URL = "jdbc:derby:C:/COMP603/Retail-Management-System/WRetailSystem/ClothingItemDB;create=true";
 
     // Establish a database connection
     public static Connection connect() throws SQLException {
-        return DriverManager.getConnection(DB_URL);
+        return DriverManager.getConnection(CLOTHING_DB_URL);
     }
 
     // Create the Clothing table if it doesn't exist
