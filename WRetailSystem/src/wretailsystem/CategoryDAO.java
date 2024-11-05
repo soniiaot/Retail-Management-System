@@ -1,21 +1,17 @@
 package wretailsystem;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryDAO {
 
-    private static final String DB_URL = "jdbc:derby:rms;create=true";
+    static final String CATEGORY_DB_URL = "jdbc:derby:C:/COMP603/Retail-Management-System/WRetailSystem/CategoryDB;create=true";
 
-    // Establish a database connection
     public static Connection connect() throws SQLException {
-        return DriverManager.getConnection(DB_URL);
+        return DriverManager.getConnection(CATEGORY_DB_URL);
     }
 
-    // Create the Category table if it doesn't exist
     public void createCategoryTable() {
         String createTableSQL = "CREATE TABLE Category (" +
                 "id VARCHAR(50) PRIMARY KEY, " +
@@ -26,13 +22,12 @@ public class CategoryDAO {
             stmt.executeUpdate(createTableSQL);
             System.out.println("Category table created or already exists.");
         } catch (SQLException e) {
-            if (!"X0Y32".equals(e.getSQLState())) { // Ignore "table already exists" error
+            if (!"X0Y32".equals(e.getSQLState())) {
                 e.printStackTrace();
             }
         }
     }
 
-    // Add a new category to the Category table
     public void addCategory(Category category) {
         String insertSQL = "INSERT INTO Category (id, name) VALUES (?, ?)";
         try (Connection conn = connect();
@@ -46,6 +41,46 @@ public class CategoryDAO {
         }
     }
 
-    // Additional methods for update, delete, and retrieve can be added as needed
-}
+    public void updateCategory(Category category) {
+        String updateSQL = "UPDATE Category SET name = ? WHERE id = ?";
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(updateSQL)) {
+            pstmt.setString(1, category.getCategoryName());
+            pstmt.setString(2, category.getCategoryID());
+            pstmt.executeUpdate();
+            System.out.println("Category updated in database.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void deleteCategory(String categoryID) {
+        String deleteSQL = "DELETE FROM Category WHERE id = ?";
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(deleteSQL)) {
+            pstmt.setString(1, categoryID);
+            pstmt.executeUpdate();
+            System.out.println("Category deleted from database.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Category> getAllCategories() {
+        List<Category> categories = new ArrayList<>();
+        String query = "SELECT id, name FROM Category";
+        try (Connection conn = connect();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+            while (rs.next()) {
+                String id = rs.getString("id");
+                String name = rs.getString("name");
+                Category category = new Category(id, name);
+                categories.add(category);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return categories;
+    }
+}
