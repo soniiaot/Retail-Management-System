@@ -1,68 +1,87 @@
 package wretailsystem;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.UUID;
 
 public class ClothingItem {
+    private String id;
     private String size;
     private String color;
     private double price;
     private String brand;
     private int quantity;
-    private String id; // Unique identifier
+    private String categoryID;
 
-    // Constructor with automatic UUID generation for id
-    public ClothingItem(String size, String color, double price, String brand, int quantity) {
+    public ClothingItem(String size, String color, double price, String brand, int quantity, String categoryID) {
+        this.id = UUID.randomUUID().toString(); // Auto-generate ID
         this.size = size;
         this.color = color;
         this.price = price;
         this.brand = brand;
         this.quantity = quantity;
-        this.id = UUID.randomUUID().toString(); // Generate unique ID
+        this.categoryID = categoryID;
     }
 
-    // Display clothing item details
-    public void display() {
-        System.out.println(this.toString());
+    // Constructor for loading existing items from database
+    public ClothingItem(String id, String size, String color, double price, String brand, int quantity, String categoryID) {
+        this.id = id;
+        this.size = size;
+        this.color = color;
+        this.price = price;
+        this.brand = brand;
+        this.quantity = quantity;
+        this.categoryID = categoryID;
     }
 
-    // Check if this item matches search criteria
-    public boolean matches(String size, String color, String brand) {
-        boolean sizeMatches = (size == null || size.isEmpty() || this.size.equals(size));
-        boolean colorMatches = (color == null || color.isEmpty() || this.color.equals(color));
-        boolean brandMatches = (brand == null || brand.isEmpty() || this.brand.equals(brand));
-        return sizeMatches && colorMatches && brandMatches;
+    // Getters and setters
+    public String getId() {
+        return id;
     }
 
-    // Override toString method for detailed display including the ID
-    @Override
-    public String toString() {
-        return "ID: " + id + ", Size: " + size + ", Color: " + color +
-               ", Price: $" + price + ", Brand: " + brand + ", Quantity: " + quantity;
+    public String getCategoryID() {
+        return categoryID;
     }
 
-    // Apply a discount to this item
-    public void applyDiscount(double discountPercentage) {
-        this.price *= (1 - discountPercentage / 100);
+    public void setCategoryID(String categoryID) {
+        this.categoryID = categoryID;
     }
 
-    // Getters
-    public String getId() { return id; } // Added getter for id
-    public String getSize() { return size; }
-    public String getColor() { return color; }
-    public double getPrice() { return price; }
-    public String getBrand() { return brand; }
-    public int getQuantity() { return quantity; }
+    public String getSize() {
+        return size;
+    }
 
-    // File-saving method for optional file-based storage
-    public void saveToFile(String filename) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
-            writer.write(this.toString());
-            writer.newLine();
-        } catch (IOException e) {
-            System.out.println("Error writing to file: " + e.getMessage());
-        }
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

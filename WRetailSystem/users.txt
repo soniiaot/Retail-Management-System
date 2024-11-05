@@ -1,4 +1,1 @@
-admin:admin123
-user1:password1
-Logan:Logan123
-a:a
+admin,admin123
