@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CategoryDAO {
 
-    static final String CATEGORY_DB_URL = "jdbc:derby:./WRetailSystem/CategoryDB;create=true";
+static final String CATEGORY_DB_URL = "jdbc:derby:./WRetailSystem/CategoryDB;create=true";
 
     public static Connection connect() throws SQLException {
         return DriverManager.getConnection(CATEGORY_DB_URL);

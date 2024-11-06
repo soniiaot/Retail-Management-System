@@ -22,15 +22,18 @@ public class Main extends JFrame {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 18));
         titleLabel.setForeground(new Color(70, 130, 180)); // SteelBlue color
 
-        JPanel buttonPanel = new JPanel(new GridLayout(3, 1, 10, 10));
+        JPanel buttonPanel = new JPanel(new GridLayout(4, 1, 10, 10)); // Adjusted to include 4 buttons
 
         JButton clothingItemsButton = createStyledButton("Clothing Items");
-        JButton managePriceButton = createStyledButton("Manage Price");
+        JButton discountManagementButton = createStyledButton("Discount Management");
         JButton categoryButton = createStyledButton("Category");
+        JButton exitButton = createStyledButton("Exit"); // Exit button
 
+        // Add buttons to the panel
         buttonPanel.add(clothingItemsButton);
-        buttonPanel.add(managePriceButton);
+        buttonPanel.add(discountManagementButton);
         buttonPanel.add(categoryButton);
+        buttonPanel.add(exitButton); // Add Exit button
 
         mainPanel.add(titleLabel, BorderLayout.NORTH);
         mainPanel.add(buttonPanel, BorderLayout.CENTER);
@@ -48,6 +51,21 @@ public class Main extends JFrame {
             clothingGUI.setVisible(true);
         });
 
+        // Action listener for Discount Management button to open DiscountManagementGUI
+        discountManagementButton.addActionListener(e -> {
+            DiscountManagementGUI discountGUI = new DiscountManagementGUI(clothingUI, categoryUI);
+            discountGUI.setVisible(true);
+        });
+
+        // Action listener for Exit button to exit the program
+        exitButton.addActionListener(e -> {
+            int confirmation = JOptionPane.showConfirmDialog(this, "Are you sure you want to exit?", 
+                                                              "Exit", JOptionPane.YES_NO_OPTION);
+            if (confirmation == JOptionPane.YES_OPTION) {
+                System.exit(0); // Close the application
+            }
+        });
+
         setVisible(true);
     }
 
@@ -63,6 +81,7 @@ public class Main extends JFrame {
         ));
         return button;
     }
+    
 
     // Initialize database tables on startup
     private static void initializeDatabase() {
@@ -102,4 +121,3 @@ public class Main extends JFrame {
         });
     }
 }
-
