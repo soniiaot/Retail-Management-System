@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Wed Nov 06 11:10:32 NZDT 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0192-fe61-269a-00000ea00000 
-on database directory C:\COMP603\Retail-Management-System\WRetailSystem\ClothingItemDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5acf9800 
+Wed Nov 06 20:03:15 NZDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0193-0048-de3b-00000eaab490 
+on database directory C:\COMP603\Retail-Management-System\WRetailSystem\WRetailSystem\CategoryDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
 Loaded from file:/C:/COMP603/Retail-Management-System/WRetailSystem/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=17.0.12+8-LTS-286
@@ -12,9 +12,9 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Wed Nov 06 11:10:33 NZDT 2024:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 582f8014-0192-fe61-269a-00000ea00000 
-on database directory C:\COMP603\Retail-Management-System\WRetailSystem\CategoryDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5acf9800 
+Wed Nov 06 20:03:16 NZDT 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 2e31c0ab-0193-0048-de3b-00000eaab490 
+on database directory C:\COMP603\Retail-Management-System\WRetailSystem\WRetailSystem\ClothingItemDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
 Loaded from file:/C:/COMP603/Retail-Management-System/WRetailSystem/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=17.0.12+8-LTS-286

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ClothingDAO {
 
-    static final String CLOTHING_DB_URL = "jdbc:derby:C:/COMP603/Retail-Management-System/WRetailSystem/ClothingItemDB;create=true";
+    static final String CLOTHING_DB_URL = "jdbc:derby:./WRetailSystem/ClothingItemDB;create=true";
 
     // Establish a database connection
     public static Connection connect() throws SQLException {
