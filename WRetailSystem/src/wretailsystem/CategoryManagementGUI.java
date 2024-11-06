@@ -31,17 +31,14 @@ public class CategoryManagementGUI extends JFrame {
         categoryTable = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(categoryTable);
 
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 0)); // Adjusted to fit Back button only
-
+        JPanel buttonPanel = new JPanel(new GridLayout(1, 3, 10, 0));
         JButton addButton = new JButton("Add");
         JButton updateButton = new JButton("Update");
         JButton deleteButton = new JButton("Delete");
-        JButton backButton = new JButton("Back");
 
         buttonPanel.add(addButton);
         buttonPanel.add(updateButton);
         buttonPanel.add(deleteButton);
-        buttonPanel.add(backButton);
 
         add(scrollPane, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
@@ -49,14 +46,6 @@ public class CategoryManagementGUI extends JFrame {
         addButton.addActionListener(e -> showAddCategoryDialog());
         updateButton.addActionListener(e -> showUpdateCategoryDialog());
         deleteButton.addActionListener(e -> showDeleteCategoryDialog());
-
-        // Back button action to close the current window
-        backButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose(); // Close the current window
-            }
-        });
     }
 
     private void loadCategoryData() {
