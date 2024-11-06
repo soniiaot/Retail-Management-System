@@ -27,4 +27,15 @@ public void updateClothing(String clothingID, String size, String color, double 
     public List<ClothingItem> getAllClothing() {
         return clothingService.getAllClothing();
     }
+    
+    public void applyDiscountByCategory(String categoryID, double discountPercentage) {
+    List<ClothingItem> items = clothingService.getAllClothing();
+    for (ClothingItem item : items) {
+        if (item.getCategoryID().equals(categoryID)) {
+            double newPrice = item.getPrice() * (1 - discountPercentage / 100);
+            item.setPrice(newPrice);
+            clothingService.updateClothing(item.getId(), item.getSize(), item.getColor(), newPrice, item.getBrand(), item.getQuantity(), categoryID);
+        }
+    }
+}
 }

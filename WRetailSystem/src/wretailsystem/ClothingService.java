@@ -9,13 +9,13 @@ public class ClothingService {
 
     public ClothingService(ClothingDAO clothingDAO) {
         this.clothingDAO = clothingDAO;
-        this.clothingItems = clothingDAO.getAllClothing(); // Load all items from database on startup
+        this.clothingItems = clothingDAO.getAllClothing(); 
     }
 
     public ClothingItem createClothing(String size, String color, double price, String brand, int quantity, String categoryID) {
         ClothingItem clothing = new ClothingItem(size, color, price, brand, quantity, categoryID);
         clothingDAO.addClothing(clothing);
-        clothingItems.add(clothing);  // Add to in-memory list
+        clothingItems.add(clothing); 
         return clothing;
     }
 
