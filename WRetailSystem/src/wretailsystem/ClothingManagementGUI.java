@@ -31,14 +31,16 @@ public class ClothingManagementGUI extends JFrame {
         clothingTable = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(clothingTable);
 
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 3, 10, 0));
+        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 0)); // Adjusted for 4 buttons
         JButton addButton = new JButton("Add");
         JButton updateButton = new JButton("Update");
         JButton deleteButton = new JButton("Delete");
+        JButton backButton = new JButton("Back"); // Back button
 
         buttonPanel.add(addButton);
         buttonPanel.add(updateButton);
         buttonPanel.add(deleteButton);
+        buttonPanel.add(backButton); // Add Back button
 
         add(scrollPane, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
@@ -46,6 +48,9 @@ public class ClothingManagementGUI extends JFrame {
         addButton.addActionListener(e -> showAddClothingDialog());
         updateButton.addActionListener(e -> showUpdateClothingDialog());
         deleteButton.addActionListener(e -> showDeleteClothingDialog());
+
+        // Action listener for the Back button to close the current window
+        backButton.addActionListener(e -> dispose()); // Close the current window (back to previous page)
     }
 
     private void loadClothingData() {
@@ -139,6 +144,3 @@ public class ClothingManagementGUI extends JFrame {
         }
     }
 }
-
-
-
