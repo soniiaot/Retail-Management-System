@@ -126,4 +126,13 @@ public List<ClothingItem> getAllClothing() {
     }
     return clothingItems;
 }
+public void clearClothingTable() {
+    String clearTableSQL = "DELETE FROM Clothing";
+    try (Connection conn = connect();
+         Statement stmt = conn.createStatement()) {
+        stmt.executeUpdate(clearTableSQL);
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
 }
