@@ -1,5 +1,10 @@
 package wretailsystem;
-
+/*
+This class gives data access methods to interact
+with the Category table in the database. This 
+includes add, update, delete and read methods.
+This class manages the database connections.
+*/
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

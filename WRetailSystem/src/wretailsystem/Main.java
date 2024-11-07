@@ -28,13 +28,14 @@ public class Main extends JFrame {
         JButton discountManagementButton = createStyledButton("Discount Management");
         JButton categoryButton = createStyledButton("Category");
         JButton exitButton = createStyledButton("Exit"); // Exit button
-
+        JButton searchButton = createStyledButton("Search");
         // Add buttons to the panel
         buttonPanel.add(clothingItemsButton);
         buttonPanel.add(discountManagementButton);
         buttonPanel.add(categoryButton);
-        buttonPanel.add(exitButton); // Add Exit button
-
+        buttonPanel.add(exitButton); 
+        buttonPanel.add(searchButton);
+        
         mainPanel.add(titleLabel, BorderLayout.NORTH);
         mainPanel.add(buttonPanel, BorderLayout.CENTER);
         add(mainPanel);
@@ -65,6 +66,10 @@ public class Main extends JFrame {
                 System.exit(0); // Close the application
             }
         });
+        searchButton.addActionListener(e -> {
+    SearchGUI searchGUI = new SearchGUI(clothingUI, categoryUI);
+    searchGUI.setVisible(true);
+});
 
         setVisible(true);
     }

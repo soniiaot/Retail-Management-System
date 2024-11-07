@@ -1,4 +1,8 @@
 package wretailsystem;
+/*
+This class createas the GUI for applying discounts to items by
+category. Users can select a category to apply a discount to.
+*/
 
 import javax.swing.*;
 import java.awt.*;

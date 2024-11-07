@@ -1,4 +1,9 @@
 package wretailsystem;
+/*
+This class provides the user interface for managing clothing items.
+This displays the add, update and delete functions for each clothing 
+item. This goes hand in hand with ClothingUI for clothing realted operations.
+*/
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -27,7 +32,8 @@ public class ClothingManagementGUI extends JFrame {
     private void initComponents() {
         setLayout(new BorderLayout());
 
-        tableModel = new DefaultTableModel(new String[]{"ID", "Size", "Color", "Price", "Brand", "Quantity", "Category ID"}, 0);
+        tableModel = new DefaultTableModel(new String[]{"ID", "Name", "Size", "Color", "Price", "Brand", "Quantity", "Category ID"}, 0);
+
         clothingTable = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(clothingTable);
 
@@ -54,35 +60,44 @@ public class ClothingManagementGUI extends JFrame {
     }
 
     private void loadClothingData() {
-        tableModel.setRowCount(0);
-        List<ClothingItem> clothingItems = clothingUI.getAllClothing();
-        for (ClothingItem item : clothingItems) {
-            tableModel.addRow(new Object[]{item.getId(), item.getSize(), item.getColor(), item.getPrice(), item.getBrand(), item.getQuantity(), item.getCategoryID()});
-        }
+    tableModel.setRowCount(0);
+    List<ClothingItem> clothingItems = clothingUI.getAllClothing();
+    for (ClothingItem item : clothingItems) {
+        tableModel.addRow(new Object[]{item.getId(), item.getName(), item.getSize(), item.getColor(), item.getPrice(), item.getBrand(), item.getQuantity(), item.getCategoryID()});
+    }
+}
+
+
+private void showAddClothingDialog() {
+    String name = JOptionPane.showInputDialog(this, "Enter Name:");
+    if (name == null || name.trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Name cannot be empty.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+    
+    String size = JOptionPane.showInputDialog(this, "Enter Size:");
+    String color = JOptionPane.showInputDialog(this, "Enter Color:");
+    double price = Double.parseDouble(JOptionPane.showInputDialog(this, "Enter Price:"));
+    String brand = JOptionPane.showInputDialog(this, "Enter Brand:");
+    int quantity = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter Quantity:"));
+
+    List<Category> categories = categoryUI.getAllCategories();
+    JComboBox<String> categoryDropdown = new JComboBox<>();
+    for (Category category : categories) {
+        categoryDropdown.addItem(category.getCategoryID() + " - " + category.getCategoryName());
     }
 
-    private void showAddClothingDialog() {
-        String size = JOptionPane.showInputDialog(this, "Enter Size:");
-        String color = JOptionPane.showInputDialog(this, "Enter Color:");
-        double price = Double.parseDouble(JOptionPane.showInputDialog(this, "Enter Price:"));
-        String brand = JOptionPane.showInputDialog(this, "Enter Brand:");
-        int quantity = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter Quantity:"));
+    int result = JOptionPane.showConfirmDialog(this, categoryDropdown, "Select Category", JOptionPane.OK_CANCEL_OPTION);
+    if (result == JOptionPane.OK_OPTION) {
+        String selectedCategory = (String) categoryDropdown.getSelectedItem();
+        String categoryID = selectedCategory.split(" - ")[0];
 
-        List<Category> categories = categoryUI.getAllCategories();
-        JComboBox<String> categoryDropdown = new JComboBox<>();
-        for (Category category : categories) {
-            categoryDropdown.addItem(category.getCategoryID() + " - " + category.getCategoryName());
-        }
-
-        int result = JOptionPane.showConfirmDialog(this, categoryDropdown, "Select Category", JOptionPane.OK_CANCEL_OPTION);
-        if (result == JOptionPane.OK_OPTION) {
-            String selectedCategory = (String) categoryDropdown.getSelectedItem();
-            String categoryID = selectedCategory.split(" - ")[0];
-
-            clothingUI.createClothing(size, color, price, brand, quantity, categoryID);
-            loadClothingData();
-        }
+        clothingUI.createClothing(name, size, color, price, brand, quantity, categoryID);
+        loadClothingData();
     }
+}
+
+
 
     private void showUpdateClothingDialog() {
         int selectedRow = clothingTable.getSelectedRow();

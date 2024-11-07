@@ -1,5 +1,11 @@
 package wretailsystem;
-
+/*
+This class manages database operations for the 
+clothing items within our program. It establishes
+a connection to the database abd performs add, delete,
+update and read methods. The clothing items has an item
+size, color, price, brand, quantity and category.
+*/
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,12 +31,13 @@ public void dropClothingTable() {
 public void createClothingTable() {
     String createTableSQL = "CREATE TABLE Clothing (" +
             "id VARCHAR(50) PRIMARY KEY, " +
+            "name VARCHAR(50), " +
             "size VARCHAR(20), " +
             "color VARCHAR(20), " +
             "price DOUBLE, " +
             "brand VARCHAR(50), " +
             "quantity INT, " +
-            "categoryID VARCHAR(50)" + // New column for category ID
+            "categoryID VARCHAR(50)" +
             ")";
     try (Connection conn = connect();
          Statement stmt = conn.createStatement()) {
@@ -44,17 +51,18 @@ public void createClothingTable() {
 }
 
     // Add a new clothing item to the Clothing table
-    public void addClothing(ClothingItem clothing) {
-    String insertSQL = "INSERT INTO Clothing (id, size, color, price, brand, quantity, categoryID) VALUES (?, ?, ?, ?, ?, ?, ?)";
+public void addClothing(ClothingItem clothing) {
+    String insertSQL = "INSERT INTO Clothing (id, name, size, color, price, brand, quantity, categoryID) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     try (Connection conn = connect();
          PreparedStatement pstmt = conn.prepareStatement(insertSQL)) {
         pstmt.setString(1, clothing.getId());
-        pstmt.setString(2, clothing.getSize());
-        pstmt.setString(3, clothing.getColor());
-        pstmt.setDouble(4, clothing.getPrice());
-        pstmt.setString(5, clothing.getBrand());
-        pstmt.setInt(6, clothing.getQuantity());
-        pstmt.setString(7, clothing.getCategoryID());
+        pstmt.setString(2, clothing.getName()); // New name field
+        pstmt.setString(3, clothing.getSize());
+        pstmt.setString(4, clothing.getColor());
+        pstmt.setDouble(5, clothing.getPrice());
+        pstmt.setString(6, clothing.getBrand());
+        pstmt.setInt(7, clothing.getQuantity());
+        pstmt.setString(8, clothing.getCategoryID());
         pstmt.executeUpdate();
         System.out.println("Clothing item added to database.");
     } catch (SQLException e) {
@@ -96,12 +104,13 @@ public void createClothingTable() {
     // Retrieve all clothing items from the database
 public List<ClothingItem> getAllClothing() {
     List<ClothingItem> clothingItems = new ArrayList<>();
-    String query = "SELECT id, size, color, price, brand, quantity, categoryID FROM Clothing";
+    String query = "SELECT id, name, size, color, price, brand, quantity, categoryID FROM Clothing";
     try (Connection conn = connect();
          Statement stmt = conn.createStatement();
          ResultSet rs = stmt.executeQuery(query)) {
         while (rs.next()) {
             String id = rs.getString("id");
+            String name = rs.getString("name"); // Retrieve name
             String size = rs.getString("size");
             String color = rs.getString("color");
             double price = rs.getDouble("price");
@@ -109,7 +118,7 @@ public List<ClothingItem> getAllClothing() {
             int quantity = rs.getInt("quantity");
             String categoryID = rs.getString("categoryID");
 
-            ClothingItem clothingItem = new ClothingItem(id, size, color, price, brand, quantity, categoryID);
+            ClothingItem clothingItem = new ClothingItem(id, name, size, color, price, brand, quantity, categoryID);
             clothingItems.add(clothingItem);
         }
     } catch (SQLException e) {
