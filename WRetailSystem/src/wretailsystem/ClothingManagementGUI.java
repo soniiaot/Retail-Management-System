@@ -15,8 +15,9 @@ public class ClothingManagementGUI extends JFrame {
     private JTable clothingTable;
     private DefaultTableModel tableModel;
     private ClothingUI clothingUI;
-    private CategoryUI categoryUI;  // Reference to CategoryUI for fetching categories
+    private CategoryUI categoryUI;
 
+    //Constructor to initialize ClothingManagementGUI
     public ClothingManagementGUI(ClothingUI clothingUI, CategoryUI categoryUI) {
         this.clothingUI = clothingUI;
         this.categoryUI = categoryUI;
@@ -29,36 +30,34 @@ public class ClothingManagementGUI extends JFrame {
         loadClothingData();
     }
 
+    //Initializes the buttons for the Clothing tab of the applications and the table.
     private void initComponents() {
         setLayout(new BorderLayout());
-
+        //The table layout
         tableModel = new DefaultTableModel(new String[]{"ID", "Name", "Size", "Color", "Price", "Brand", "Quantity", "Category ID"}, 0);
-
         clothingTable = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(clothingTable);
-
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 0)); // Adjusted for 4 buttons
+        //Setting up the buttons
+        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 10, 0));
         JButton addButton = new JButton("Add");
         JButton updateButton = new JButton("Update");
         JButton deleteButton = new JButton("Delete");
-        JButton backButton = new JButton("Back"); // Back button
-
+        JButton backButton = new JButton("Back");
+        //Adding it to the panel
         buttonPanel.add(addButton);
         buttonPanel.add(updateButton);
         buttonPanel.add(deleteButton);
-        buttonPanel.add(backButton); // Add Back button
+        buttonPanel.add(backButton); 
 
         add(scrollPane, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
-
+        //Action listeners for each button
         addButton.addActionListener(e -> showAddClothingDialog());
         updateButton.addActionListener(e -> showUpdateClothingDialog());
         deleteButton.addActionListener(e -> showDeleteClothingDialog());
-
-        // Action listener for the Back button to close the current window
-        backButton.addActionListener(e -> dispose()); // Close the current window (back to previous page)
+        backButton.addActionListener(e -> dispose());
     }
-
+//Loads data into the Jtable from ClothingUI class
     private void loadClothingData() {
     tableModel.setRowCount(0);
     List<ClothingItem> clothingItems = clothingUI.getAllClothing();
@@ -67,7 +66,7 @@ public class ClothingManagementGUI extends JFrame {
     }
 }
 
-
+//Shows the prompts after button is pressed.
 private void showAddClothingDialog() {
     String name = JOptionPane.showInputDialog(this, "Enter Name:");
     if (name == null || name.trim().isEmpty()) {

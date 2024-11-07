@@ -1,5 +1,8 @@
 package wretailsystem;
-
+/*
+This class is for the tab for searching items, users can search by each aspect 
+of each clothing item. 
+*/
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
@@ -9,7 +12,7 @@ public class SearchGUI extends JFrame {
     private JComboBox<String> criteriaDropdown;
     private JTextField searchField;
     private JTextArea resultArea;
-
+//Constructor to initialize SearchGUI
     public SearchGUI(ClothingUI clothingUI, CategoryUI categoryUI) {
         this.clothingUI = clothingUI;
         setTitle("Search Clothing Items");
@@ -19,7 +22,7 @@ public class SearchGUI extends JFrame {
         
         initComponents();
     }
-
+//Sets up buttons and drop downs for the GUI
     private void initComponents() {
         setLayout(new BorderLayout(10, 10));
 
@@ -55,7 +58,7 @@ public class SearchGUI extends JFrame {
 
         searchButton.addActionListener(e -> performSearch());
     }
-
+//Search is based on user input
     private void performSearch() {
         String criteria = (String) criteriaDropdown.getSelectedItem();
         String searchValue = searchField.getText().trim();
@@ -64,7 +67,7 @@ public class SearchGUI extends JFrame {
             JOptionPane.showMessageDialog(this, "Please enter a search value.", "Input Required", JOptionPane.WARNING_MESSAGE);
             return;
         }
-
+//Cases for each search type
         List<ClothingItem> results;
         switch (criteria) {
             case "ID":
@@ -100,7 +103,7 @@ public class SearchGUI extends JFrame {
 
         displayResults(results);
     }
-
+//Displays a clean result if found.
     private void displayResults(List<ClothingItem> results) {
         resultArea.setText("");
         if (results == null || results.isEmpty()) {

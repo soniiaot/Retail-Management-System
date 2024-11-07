@@ -14,14 +14,15 @@ public class Password {
     private Map<String, String> userCredentials = new HashMap<>();
 
     public Password(String filePath) {
-        loadCredentials(filePath);
+        loadCredentials(filePath);//loads credentials from file
     }
 
+//method to load from file
     private void loadCredentials(String filePath) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
+                String[] parts = line.split(",");//uses a comma to find username and password
                 if (parts.length == 2) {
                     String username = parts[0].trim();
                     String password = parts[1].trim();
@@ -33,6 +34,7 @@ public class Password {
         }
     }
 
+    //method to match user input to compare to file
     public boolean authenticate() {
         String username = JOptionPane.showInputDialog("Enter username:");
         String password = JOptionPane.showInputDialog("Enter password:");

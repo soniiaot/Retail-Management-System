@@ -16,28 +16,29 @@ public class CategoryService {
 
     public CategoryService(CategoryDAO categoryDAO) {
         this.categoryDAO = categoryDAO;
-        this.categories = categoryDAO.getAllCategories(); // Load all categories from database on startup
+        this.categories = categoryDAO.getAllCategories(); //Loads categories from the database
     }
-
+    
+    //Creates category from user input and adds it to the database
     public Category createCategory(String name) {
         Category category = new Category(name);
         categoryDAO.addCategory(category);
-        categories.add(category);  // Add to in-memory list
+        categories.add(category);
         return category;
     }
-
+//Gets teh category based on category id
     public Category getCategoryByID(String categoryID) {
         return categories.stream()
                          .filter(cat -> cat.getCategoryID().equals(categoryID))
                          .findFirst()
                          .orElse(null);
     }
-
+//Updates category based on user input
     public Category updateCategory(String categoryID, String newName) {
         Category category = getCategoryByID(categoryID);
         if (category != null) {
             category.setCategoryName(newName);
-            categoryDAO.updateCategory(category);  // Update in database
+            categoryDAO.updateCategory(category);  
         }
         return category;
     }
@@ -45,8 +46,8 @@ public class CategoryService {
     public boolean deleteCategory(String categoryID) {
         Category category = getCategoryByID(categoryID);
         if (category != null) {
-            categoryDAO.deleteCategory(categoryID);  // Delete from database
-            return categories.remove(category);  // Remove from in-memory list
+            categoryDAO.deleteCategory(categoryID);  
+            return categories.remove(category);  
         }
         return false;
     }
