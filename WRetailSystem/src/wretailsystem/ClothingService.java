@@ -14,23 +14,24 @@ public class ClothingService {
 
     public ClothingService(ClothingDAO clothingDAO) {
         this.clothingDAO = clothingDAO;
-        this.clothingItems = clothingDAO.getAllClothing(); // Load all items from database on startup
+        this.clothingItems = clothingDAO.getAllClothing(); //Load all items from database on startup
     }
 
+    //Creates clothing items and interacts with database
 public ClothingItem createClothing(String name, String size, String color, double price, String brand, int quantity, String categoryID) {
     ClothingItem clothing = new ClothingItem(name, size, color, price, brand, quantity, categoryID);
     clothingDAO.addClothing(clothing);
     clothingItems.add(clothing);
     return clothing;
 }
-
+//Gets clothing by ID
     public ClothingItem getClothingByID(String clothingID) {
         return clothingItems.stream()
                             .filter(item -> item.getId().equals(clothingID))
                             .findFirst()
                             .orElse(null);
     }
-
+//updates clothing item if user changes any aspects
     public ClothingItem updateClothing(String clothingID, String size, String color, double price, String brand, int quantity, String categoryID) {
         ClothingItem clothing = getClothingByID(clothingID);
         if (clothing != null) {
@@ -39,12 +40,12 @@ public ClothingItem createClothing(String name, String size, String color, doubl
             clothing.setPrice(price);
             clothing.setBrand(brand);
             clothing.setQuantity(quantity);
-            clothing.setCategoryID(categoryID);  // Update category ID
+            clothing.setCategoryID(categoryID);  
             clothingDAO.updateClothing(clothing);  // Update in database
         }
         return clothing;
     }
-
+//deletes clothing 
     public boolean deleteClothing(String clothingID) {
         ClothingItem clothing = getClothingByID(clothingID);
         if (clothing != null) {
@@ -53,10 +54,11 @@ public ClothingItem createClothing(String name, String size, String color, doubl
         }
         return false;
     }
-
+//returns all clothing items from list
     public List<ClothingItem> getAllClothing() {
         return new ArrayList<>(clothingItems);
     }
+
 public List<ClothingItem> searchByName(String name) {
     List<ClothingItem> result = new ArrayList<>();
     for (ClothingItem item : clothingItems) {
