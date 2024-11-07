@@ -1,5 +1,8 @@
 package wretailsystem;
-
+/*
+This class handles the user authentication by checking the input 
+with the credentials from a file to validate login attempts.
+*/
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

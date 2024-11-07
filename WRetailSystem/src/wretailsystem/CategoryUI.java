@@ -1,5 +1,7 @@
 package wretailsystem;
-
+/*
+This class just simiplifies interactions for category related functions
+*/
 import java.util.List;
 
 public class CategoryUI {

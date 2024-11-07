@@ -1,5 +1,8 @@
 package wretailsystem;
-
+/*
+ * Class to define the Category Object. This is so that
+ * the user can create new categories if needed
+ */
 import java.util.UUID;
 import java.util.List;
 import java.util.ArrayList;
@@ -7,7 +10,6 @@ import java.util.ArrayList;
 public class Category {
     private String categoryID;
     private String categoryName;
-    private List<ClothingItem> clothingItems = new ArrayList<>();
 
     public Category() {}
 

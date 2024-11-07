@@ -1,5 +1,9 @@
 package wretailsystem;
-
+/*
+This class deals with the interface aspect of the
+category tab. This includes buttons for the add, 
+update and delete features. 
+*/
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;

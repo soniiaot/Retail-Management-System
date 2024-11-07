@@ -1,5 +1,12 @@
 package wretailsystem;
-
+/*
+This class is a layer between the CategoryDAO class
+and other parts of the application and deals with
+category-related business logic. This class maintains
+a in-memory list for quick access. This class ensures
+that the changes are saved to the database through
+CategoryDAO
+*/
 import java.util.List;
 import java.util.ArrayList;
 

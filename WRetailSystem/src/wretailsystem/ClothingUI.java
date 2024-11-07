@@ -1,5 +1,8 @@
 package wretailsystem;
-
+/*
+This class is a layer between the user interface and ClothingService.
+This class also has a discount by category method.
+*/
 import java.util.List;
 
 public class ClothingUI {
@@ -9,8 +12,8 @@ public class ClothingUI {
         this.clothingService = clothingService;
     }
 
-public void createClothing(String size, String color, double price, String brand, int quantity, String categoryID) {
-    clothingService.createClothing(size, color, price, brand, quantity, categoryID);
+public void createClothing(String name, String size, String color, double price, String brand, int quantity, String categoryID) {
+    clothingService.createClothing(name, size, color, price, brand, quantity, categoryID);
 }
 
     public ClothingItem getClothingByID(String clothingID) {
@@ -38,4 +41,32 @@ public void updateClothing(String clothingID, String size, String color, double 
         }
     }
 }
+    public List<ClothingItem> searchByName(String name) {
+    return clothingService.searchByName(name);
+}
+
+    public List<ClothingItem> searchById(String id) {
+    return clothingService.searchById(id);
+}
+
+public List<ClothingItem> searchBySize(String size) {
+    return clothingService.searchBySize(size);
+}
+
+public List<ClothingItem> searchByColor(String color) {
+    return clothingService.searchByColor(color);
+}
+
+public List<ClothingItem> searchByPrice(double price) {
+    return clothingService.searchByPrice(price);
+}
+
+public List<ClothingItem> searchByBrand(String brand) {
+    return clothingService.searchByBrand(brand);
+}
+
+public List<ClothingItem> searchByCategoryID(String categoryID) {
+    return clothingService.searchByCategoryID(categoryID);
+}
+
 }
