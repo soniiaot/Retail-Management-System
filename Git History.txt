@@ -1,0 +1,495 @@
+commit 84a9e99218c9425d06f1a06765b7c5c63413561a (HEAD -> main, origin/main, origin/HEAD)
+Merge: 45db2ef bae2976
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:52 2024 +1300
+
+    Merge pull request #9 from soniiaot/Sonia
+
+    final comments
+
+commit bae29760aa478f5e9c0a64cec3876bc390e5b130
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:19 2024 +1300
+
+    final comments
+
+commit 45db2efb7d6879c99cbca9651b62798426cd283b
+Merge: afaf8b3 823ce19
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:15:24 2024 +1300
+
+    Merge pull request #8 from soniiaot/Sonia
+
+:...skipping...
+commit 84a9e99218c9425d06f1a06765b7c5c63413561a (HEAD -> main, origin/main, origin/HEAD)
+Merge: 45db2ef bae2976
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:52 2024 +1300
+
+    Merge pull request #9 from soniiaot/Sonia
+
+    final comments
+
+commit bae29760aa478f5e9c0a64cec3876bc390e5b130
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:19 2024 +1300
+
+    final comments
+
+commit 45db2efb7d6879c99cbca9651b62798426cd283b
+Merge: afaf8b3 823ce19
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:15:24 2024 +1300
+
+    Merge pull request #8 from soniiaot/Sonia
+
+    Some Commenting + Search Function
+
+commit 823ce192af94b143ba88e2f9f5465ffc374ed6c8
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:14:49 2024 +1300
+
+    Some Commenting + Search Function
+
+commit afaf8b3cae2a8078f29da5c653cfa0e0c5804ced
+Merge: 25dea2e ccf6032
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:47:23 2024 +1300
+
+    Merge pull request #7 from soniiaot/Sonia
+
+    Added unit tests
+
+commit ccf6032402c3a53678d42c4f08ac6408f6bc4f76 (Test)
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:45:03 2024 +1300
+
+    Merge Fixes
+
+    Just manually added logan's code
+
+commit 6502d45cc90b3ddca84ecb228ee318704dcd951c
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:35:33 2024 +1300
+
+    Revert "Merge branch 'main' into Sonia"
+
+    This reverts commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df, reversing
+    changes made to c4e033bfa4582ca2807a53849de861403a521880.
+
+commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df
+Merge: c4e033b 25dea2e
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:32:09 2024 +1300
+
+    Merge branch 'main' into Sonia
+
+commit c4e033bfa4582ca2807a53849de861403a521880
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:07:41 2024 +1300
+
+    unit testing stuff
+:
+commit 84a9e99218c9425d06f1a06765b7c5c63413561a (HEAD -> main, origin/main, origin/HEAD)
+Merge: 45db2ef bae2976
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:52 2024 +1300
+
+    Merge pull request #9 from soniiaot/Sonia
+
+    final comments
+
+commit bae29760aa478f5e9c0a64cec3876bc390e5b130
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:19 2024 +1300
+
+    final comments
+
+commit 45db2efb7d6879c99cbca9651b62798426cd283b
+Merge: afaf8b3 823ce19
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:15:24 2024 +1300
+
+    Merge pull request #8 from soniiaot/Sonia
+
+    Some Commenting + Search Function
+
+commit 823ce192af94b143ba88e2f9f5465ffc374ed6c8
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:14:49 2024 +1300
+
+    Some Commenting + Search Function
+
+commit afaf8b3cae2a8078f29da5c653cfa0e0c5804ced
+Merge: 25dea2e ccf6032
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:47:23 2024 +1300
+
+    Merge pull request #7 from soniiaot/Sonia
+
+    Added unit tests
+
+commit ccf6032402c3a53678d42c4f08ac6408f6bc4f76 (Test)
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:45:03 2024 +1300
+
+    Merge Fixes
+
+    Just manually added logan's code
+
+commit 6502d45cc90b3ddca84ecb228ee318704dcd951c
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:35:33 2024 +1300
+
+    Revert "Merge branch 'main' into Sonia"
+
+    This reverts commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df, reversing
+    changes made to c4e033bfa4582ca2807a53849de861403a521880.
+
+commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df
+Merge: c4e033b 25dea2e
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:32:09 2024 +1300
+
+    Merge branch 'main' into Sonia
+
+commit c4e033bfa4582ca2807a53849de861403a521880
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:07:41 2024 +1300
+
+    unit testing stuff
+...skipping...
+commit 84a9e99218c9425d06f1a06765b7c5c63413561a (HEAD -> main, origin/main, origin/HEAD)
+Merge: 45db2ef bae2976
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:52 2024 +1300
+
+    Merge pull request #9 from soniiaot/Sonia
+
+    final comments
+
+commit bae29760aa478f5e9c0a64cec3876bc390e5b130
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:19 2024 +1300
+
+    final comments
+
+commit 45db2efb7d6879c99cbca9651b62798426cd283b
+Merge: afaf8b3 823ce19
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:15:24 2024 +1300
+
+    Merge pull request #8 from soniiaot/Sonia
+
+    Some Commenting + Search Function
+
+commit 823ce192af94b143ba88e2f9f5465ffc374ed6c8
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:14:49 2024 +1300
+
+    Some Commenting + Search Function
+
+commit afaf8b3cae2a8078f29da5c653cfa0e0c5804ced
+Merge: 25dea2e ccf6032
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:47:23 2024 +1300
+
+    Merge pull request #7 from soniiaot/Sonia
+
+    Added unit tests
+
+commit ccf6032402c3a53678d42c4f08ac6408f6bc4f76 (Test)
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:45:03 2024 +1300
+
+    Merge Fixes
+
+    Just manually added logan's code
+
+commit 6502d45cc90b3ddca84ecb228ee318704dcd951c
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:35:33 2024 +1300
+
+    Revert "Merge branch 'main' into Sonia"
+
+    This reverts commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df, reversing
+    changes made to c4e033bfa4582ca2807a53849de861403a521880.
+
+commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df
+Merge: c4e033b 25dea2e
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:32:09 2024 +1300
+
+    Merge branch 'main' into Sonia
+
+commit c4e033bfa4582ca2807a53849de861403a521880
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:07:41 2024 +1300
+
+    unit testing stuff
+
+ ESCOC
+
+ ESCOD
+commit 84a9e99218c9425d06f1a06765b7c5c63413561a (HEAD -> main, origin/main, origin/HEAD)
+Merge: 45db2ef bae2976
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:52 2024 +1300
+
+    Merge pull request #9 from soniiaot/Sonia
+
+    final comments
+
+commit bae29760aa478f5e9c0a64cec3876bc390e5b130
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:19 2024 +1300
+
+    final comments
+
+commit 45db2efb7d6879c99cbca9651b62798426cd283b
+Merge: afaf8b3 823ce19
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:15:24 2024 +1300
+
+    Merge pull request #8 from soniiaot/Sonia
+
+    Some Commenting + Search Function
+
+commit 823ce192af94b143ba88e2f9f5465ffc374ed6c8
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:14:49 2024 +1300
+
+    Some Commenting + Search Function
+
+commit afaf8b3cae2a8078f29da5c653cfa0e0c5804ced
+Merge: 25dea2e ccf6032
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:47:23 2024 +1300
+
+    Merge pull request #7 from soniiaot/Sonia
+
+    Added unit tests
+
+commit ccf6032402c3a53678d42c4f08ac6408f6bc4f76 (Test)
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:45:03 2024 +1300
+
+    Merge Fixes
+
+    Just manually added logan's code
+
+commit 6502d45cc90b3ddca84ecb228ee318704dcd951c
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:35:33 2024 +1300
+
+    Revert "Merge branch 'main' into Sonia"
+
+    This reverts commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df, reversing
+    changes made to c4e033bfa4582ca2807a53849de861403a521880.
+
+commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df
+Merge: c4e033b 25dea2e
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:32:09 2024 +1300
+
+    Merge branch 'main' into Sonia
+
+commit c4e033bfa4582ca2807a53849de861403a521880
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:07:41 2024 +1300
+
+    unit testing stuff
+
+ ESCOD
+commit 84a9e99218c9425d06f1a06765b7c5c63413561a (HEAD -> main, origin/main, origin/HEAD)
+Merge: 45db2ef bae2976
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:52 2024 +1300
+
+    Merge pull request #9 from soniiaot/Sonia
+
+    final comments
+
+commit bae29760aa478f5e9c0a64cec3876bc390e5b130
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 21:45:19 2024 +1300
+
+    final comments
+
+commit 45db2efb7d6879c99cbca9651b62798426cd283b
+Merge: afaf8b3 823ce19
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:15:24 2024 +1300
+
+    Merge pull request #8 from soniiaot/Sonia
+
+    Some Commenting + Search Function
+
+commit 823ce192af94b143ba88e2f9f5465ffc374ed6c8
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Thu Nov 7 13:14:49 2024 +1300
+
+    Some Commenting + Search Function
+
+commit afaf8b3cae2a8078f29da5c653cfa0e0c5804ced
+Merge: 25dea2e ccf6032
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:47:23 2024 +1300
+
+    Merge pull request #7 from soniiaot/Sonia
+
+    Added unit tests
+
+commit ccf6032402c3a53678d42c4f08ac6408f6bc4f76 (Test)
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:45:03 2024 +1300
+
+    Merge Fixes
+
+    Just manually added logan's code
+
+commit 6502d45cc90b3ddca84ecb228ee318704dcd951c
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:35:33 2024 +1300
+
+    Revert "Merge branch 'main' into Sonia"
+
+    This reverts commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df, reversing
+    changes made to c4e033bfa4582ca2807a53849de861403a521880.
+
+commit ec378ab52bcab0cbdfcf995c6c7831e02758f7df
+Merge: c4e033b 25dea2e
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:32:09 2024 +1300
+
+    Merge branch 'main' into Sonia
+
+commit c4e033bfa4582ca2807a53849de861403a521880
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 20:07:41 2024 +1300
+
+    unit testing stuff
+
+commit 25dea2ec1bfbf11ae07ca26d807f21e3ae59e3a5
+Merge: 6aced1d 1f1a190
+Author: lowusama <148945677+lowusama@users.noreply.github.com>
+Date:   Wed Nov 6 19:58:23 2024 +1300
+
+    Merge pull request #5 from soniiaot/lo
+
+    Lo
+
+commit 1f1a1902d1a3555008c3c26437472d55a3e12272 (origin/lo, lo)
+Author: lowusama <148945677+lowusama@users.noreply.github.com>
+Date:   Wed Nov 6 19:56:51 2024 +1300
+
+    fin
+
+commit f4abd311bf4ff5891cafbd594590ed31e7c89501
+Merge: 2f86095 6aced1d
+Author: lowusama <148945677+lowusama@users.noreply.github.com>
+Date:   Wed Nov 6 11:16:00 2024 +1300
+
+    Merge branch 'main' into lo
+
+commit 2f86095da4ce80f8c6ad626f7f19be3b33588b06
+Merge: 5efb2f2 cc9d7fe
+Author: lowusama <148945677+lowusama@users.noreply.github.com>
+Date:   Wed Nov 6 11:13:33 2024 +1300
+
+    Merge branch 'main' into lo
+
+commit 6aced1d2433ae5adce1b5bd22eeb48116571a950
+Merge: cc9d7fe ff62f0f
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 11:12:19 2024 +1300
+
+    Merge pull request #4 from soniiaot/Sonia
+
+    finished clothing item button
+
+commit ff62f0f38be9246c047e04ab58787da26b155fef
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Wed Nov 6 11:11:43 2024 +1300
+
+    finished clothing item button
+
+commit cc9d7fec10b7f3c9e9f630161d3091e3315b7b5b
+Merge: 3469734 8b75347
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Tue Nov 5 19:11:18 2024 +1300
+
+    Merge pull request #3 from soniiaot/Sonia
+
+    Sonia
+
+commit 8b753473f795040f556a7ec25af0a1f70ec55d2e
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Tue Nov 5 17:29:38 2024 +1300
+
+    fixed database issue
+
+commit 5efb2f2d513296aa7a94a2969c79e67f008ad3cb
+Merge: 31eeeb2 43031ec
+Author: lowusama <148945677+lowusama@users.noreply.github.com>
+Date:   Tue Nov 5 12:36:22 2024 +1300
+
+    Merge branch 'Sonia' into lo
+
+commit 43031ec3357a99de2a90e22333b1e421f8a3a941
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Tue Nov 5 10:42:01 2024 +1300
+
+    GUI UPDATE
+
+    Changed a few classes to make the program more efficient and added  GUI
+
+commit 34697340c04e90726d1baebeae559c6206053144
+Merge: 31eeeb2 791a3f9
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Sun Oct 27 12:49:51 2024 +1300
+
+    Merge pull request #2 from soniiaot/Sonia
+
+    db setup
+
+commit 791a3f9b4ad6d2f24129f961f2d8107d23370e53
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Sun Oct 27 12:48:55 2024 +1300
+
+    db setup
+
+commit 31eeeb2304b46747bade44a7ef0c8c644e5ca603
+Merge: 694f03c 1986319
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Mon Oct 14 18:09:46 2024 +1300
+
+    Merge pull request #1 from soniiaot/Sonia
+
+    Sonia
+
+commit 1986319a2cbcc7745932c8f44968910dd666d15a
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Mon Oct 14 18:07:20 2024 +1300
+
+    wha
+
+commit 163658c4f6f9b7c5fbc2225570778e9e01a1412b
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Mon Oct 14 17:59:35 2024 +1300
+
+    Skeleton GUI code
+
+    very basic GUI
+
+commit 694f03c9f4169839073e59807be5621193acf867
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Tue Sep 24 10:49:13 2024 +1200
+
+    test
+
+commit 1de0324cd40fcc91b39106199f170fe3a2a0006e
+Author: soniiaot <132526234+soniiaot@users.noreply.github.com>
+Date:   Tue Sep 24 10:21:00 2024 +1200
+
+    Initial commit
